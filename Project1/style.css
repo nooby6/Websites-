@@ -58,7 +58,7 @@ body {
     border: 1.5px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
-    margin-bottom: 1rem; /* Added margin for space between inputs */
+    margin-bottom: 1rem;
 }
 
 .form button {
@@ -66,7 +66,7 @@ body {
     border: none;
     border-radius: 5px;
     background-color: #007BFF;
-    color: white; /* Changed text color to white for better contrast */
+    color: white;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
