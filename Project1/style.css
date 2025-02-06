@@ -1,36 +1,87 @@
 body {
-    color: antiquewhite;
+    color: #333;
     background-image: url("./images/microsoft-edge-_eCnLJWQXMg-unsplash.jpg");
-    background-position: absolute;
+    background-position: center;
     background-size: cover;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .container {
-    display: flex;
-    padding: 6rem;
-    margin: 2rem;
-    align-items: center;;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
 }
 
 .container h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    padding: 0.5rem 3rem;
-    text-align: center;
-    padding-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
 }
 
 .container p {
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding: 0.5rem 3rem;
-    text-align: center;
-    padding-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: #666;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    gap: 1.5rem;
+}
+
+.form input {
+    padding: 1rem;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 1rem; /* Added margin for space between inputs */
+}
+
+.form button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white; /* Changed text color to white for better contrast */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+    background-color: #0056b3;
+}
+
+/* Add responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 2rem;
+    }
+
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .form input, .form button {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Add focus styles for accessibility */
+.form input:focus, .form button:focus {
+    outline: 2px solid #007BFF;
+    outline-offset: 2px;
 }
