@@ -1,20 +1,30 @@
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #0056b3;
+    --text-color: #333;
+    --background-color: rgba(255, 255, 255, 0.9);
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --border-radius: 10px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 body {
-    color: #333;
+    color: var(--text-color);
     background-image: url("./images/microsoft-edge-_eCnLJWQXMg-unsplash.jpg");
     background-position: center;
     background-size: cover;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-family);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 115vh;
     margin: 0;
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
     padding: 3rem;
     max-width: 400px;
     width: 100%;
@@ -27,7 +37,7 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: #333;
+    color: var(--text-color);
 }
 
 .container p {
@@ -82,8 +92,11 @@ body {
     }
 }
 
-/* Add focus styles for accessibility */
 .form input:focus, .form button:focus {
-    outline: 2px solid #007BFF;
+    outline: 2px solid var(--primary-color);
     outline-offset: 2px;
+}
+
+.form input:hover, .form button:hover {
+    border-color: var(--secondary-color);
 }
